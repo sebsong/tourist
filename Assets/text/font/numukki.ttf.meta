@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: e6648b14623f14f28afe4e8f5bbdb99e
+timeCreated: 1508927672
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Numikki
+  fontNames:
+  - Numikki
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: c30c148445b4f4c529c962eb22f5d81a
+timeCreated: 1508927650
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: LSW Drachenklaue
+  fontNames:
+  - LSW Drachenklaue
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
