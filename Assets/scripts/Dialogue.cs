@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -6,11 +7,13 @@ using UnityEngine;
 
 public class Dialogue {
 
-	private Queue<DialogueLine> script;
+	private List<DialogueLine> script;
+	private int idx;
 
 
 	public Dialogue (TextAsset textFile) {
-		script = new Queue<DialogueLine> ();
+		script = new List<DialogueLine> ();
+		idx = 0;
 		ParseFile (textFile);
 	}
 
@@ -27,23 +30,28 @@ public class Dialogue {
 
 		foreach (string section in splitContents) {
 			if (Regex.Match (section, "<(.*)>").Success) {
-				currentSpeaker = Regex.Replace (section, "<|>", "");
+				currentSpeaker = Regex.Replace (section, "<|>| ", "");
 			} else {
-				script.Enqueue (new DialogueLine (currentSpeaker, section));
+				script.Add (new DialogueLine (currentSpeaker, section));
 			}
 		}
 	}
 
 	public string NextLine() {
-		return script.Dequeue ().GetText ();
+		string tempText = script [idx].GetText ();
+		idx++;
+		return tempText;
 	}
 
 	public bool HasLine() {
-		return script.Count > 0;
+		bool temp = idx < script.Count;
+		if (!temp) {
+			idx = 0;
+		}
+		return temp;
 	}
 
 	public string PeekNextSpeaker() {
-		return script.Peek ().GetSpeaker ();
+		return script[idx].GetSpeaker ();
 	}
-
 }

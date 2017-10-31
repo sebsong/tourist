@@ -5,34 +5,34 @@ using UnityEngine;
 public class NPCController : MonoBehaviour {
 
 	public TextAsset dialogueFile;
+	public Sprite portrait;
 
-	private Dialogue d;
+	private Dialogue dialogue;
 
 	private bool interactable;
-	private bool interacting;
+	private static bool interacting;
+	private static float interactionCooldown;
 
 	// Use this for initialization
 	void Start () {
-		d = new Dialogue (dialogueFile);
+		dialogue = new Dialogue (dialogueFile);
 		interactable = false;
-		while (d.HasLine ()) {
-			print (d.PeekNextSpeaker ());
-			print (d.NextLine ());
-		}
+		interactionCooldown = 1f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (interactable) {
-			if (!interacting) {
-				InteractableEffect ();
-			}
+		if (interactionCooldown == 0 && interactable && !interacting) {
+			InteractableEffect ();
 			if (Input.GetKeyDown (KeyCode.Space)) {
-				if (!interacting) {
-					Interact ();
-				} else {
-				}
+				Interact ();
 			}
+		}
+
+		if (interactionCooldown > 0) {
+			interactionCooldown -= Time.deltaTime;
+		} else {
+			interactionCooldown = 0;
 		}
 
 	}
@@ -43,15 +43,20 @@ public class NPCController : MonoBehaviour {
 
 	void Interact() {
 		interacting = true;
+		DialogueController.SetInteraction (portrait, dialogue);
+		DialogueController.StartInteraction ();
+	}
+
+	public static void StopInteraction () {
+		interactionCooldown = 1f;
+		interacting = false;
 	}
 
 	void OnTriggerEnter2D (Collider2D coll) {
-		print ("ENTER");
 		interactable = true;
 	}
 
 	void OnTriggerExit2D (Collider2D coll) {
-		print ("EXIT");
 		interactable = false;
 	}
 }

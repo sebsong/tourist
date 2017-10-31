@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
 	public Transform player;
+	//public float cameraOffset;
 	public float cameraFollowSpeed;
 	private Vector3 offset;
 
 	// Use this for initialization
 	void Start () {
-		offset = transform.position - player.position;
+		offset = Vector3.back;
 	}
 	
 	// Update is called once per frame
