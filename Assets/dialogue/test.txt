@@ -1,0 +1,11 @@
+<Player>
+===
+hi i'm the player
+===
+who are you
+===
+<Mario>
+===
+i'm mario
+===
+hahahahahhaa

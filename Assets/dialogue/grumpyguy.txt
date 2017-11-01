@@ -1,0 +1,49 @@
+<GrumpyGuy>
+===
+
+Hey! What're YOU lookin' at?
+
+===
+
+
+<Player>
+
+===
+
+... uh
+
+===
+
+<GrumpyGuy>
+
+===
+You better watch it!
+
+===
+
+<Player>
+
+===
+
+...
+
+===
+
+<GrumpyGUy>
+
+===
+What'cha got on you, there?
+
+===
+
+Gimme that pastry!
+
+===
+
+<Player
+
+===
+
+...fine.  Will you answer my questions now?
+
+===

@@ -7,7 +7,6 @@ public class DoorController : MonoBehaviour {
 	public float delay;
 
 	void OnTriggerEnter2D (Collider2D coll) {
-		print ("COLLISION");
 		Utility.getUtil ().FadeToScene (sceneName, delay);
 	}
 }

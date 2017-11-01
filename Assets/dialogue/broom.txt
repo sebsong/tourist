@@ -1,0 +1,40 @@
+<Broom Guy>
+===
+
+
+
+
+
+Hey! Get out of my way! Can't ya see i'm sweeping here?
+
+===
+
+You look like you've come a far way.
+
+=== 
+
+<Player>
+
+===
+
+Oh I'm sorry!
+
+===
+<Mario>
+===
+
+Dang tourists, traveling into town, making our streets dusty...
+
+
+===
+
+grumble grumble
+===
+
+<Player>
+===
+
+Hey! I may not be able to understand you, but I can tell that wasn't very nice!
+
+===
+
