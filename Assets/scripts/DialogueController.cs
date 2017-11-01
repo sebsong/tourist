@@ -71,10 +71,11 @@ public class DialogueController : MonoBehaviour {
 	public static void StartInteraction () {
 		interacting = true;
 		dialogueUI.SetActive (true);
-		ContinueInteraction ();
 	}
 
 	public static void StopInteraction () {
+		currentDialogue = null;
+		dialogueUIText.text = "";
 		dialogueUI.SetActive (false);
 		interacting = false;
 		NPCController.StopInteraction ();
