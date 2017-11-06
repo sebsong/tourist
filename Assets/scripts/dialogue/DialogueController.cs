@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DialogueController : MonoBehaviour {
 
+	private static NPCController npc;
+
 	private static GameObject dialogueUI;
 	private static Text dialogueUIText;
 
@@ -63,7 +65,8 @@ public class DialogueController : MonoBehaviour {
 	}
 
 	//Set npcUISprite image to the given portrait
-	public static void SetInteraction (Sprite portrait, Dialogue dialogue) {
+	public static void SetInteraction (NPCController npcControl, Sprite portrait, Dialogue dialogue) {
+		npc = npcControl;
 		npcUIImage.sprite = portrait;
 		currentDialogue = dialogue;
 	}
@@ -78,6 +81,6 @@ public class DialogueController : MonoBehaviour {
 		dialogueUIText.text = "";
 		dialogueUI.SetActive (false);
 		interacting = false;
-		NPCController.StopInteraction ();
+		npc.StopInteraction ();
 	}
 }

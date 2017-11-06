@@ -9,12 +9,45 @@ public abstract class Interactable : MonoBehaviour {
 	private static float interactionCooldown;
 
 	// Use this for initialization
-	void Start () {
-		
+	protected virtual void Start () {
+		interactable = false;
+		interacting = false;
+		interactionCooldown = 1f;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	protected virtual void Update () {
+		if (interactionCooldown == 0 && interactable && !interacting) {
+			InteractableEffect ();
+			if (Input.GetKeyDown (KeyCode.Space)) {
+				Interact ();
+			}
+		}
+
+		if (interactionCooldown > 0) {
+			interactionCooldown -= Time.deltaTime;
+		} else {
+			interactionCooldown = 0;
+		}
+	}
+
+	//Visual effect to indicate player in range of NPC
+	protected abstract void InteractableEffect ();
+
+	protected virtual void Interact() {
+		interacting = true;
+	}
+
+	public virtual void StopInteraction () {
+		interactionCooldown = 1f;
+		interacting = false;
+	}
+
+	protected virtual void OnTriggerEnter2D (Collider2D coll) {
+		interactable = true;
+	}
+
+	protected virtual void OnTriggerExit2D (Collider2D coll) {
+		interactable = false;
 	}
 }

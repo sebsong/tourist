@@ -4,21 +4,25 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class DoorController : MonoBehaviour {
+public class DoorController : Interactable {
 	public string doorName;
 	public string sceneName;
 	public float delay;
 
 	private Image fade;
-	private bool interactable;
 
-	void Start() {
+	protected override void Start() {
+		base.Start ();
 		fade = GameObject.FindGameObjectWithTag ("fade").GetComponent<Image>();
 		fade.canvasRenderer.SetAlpha (0f);
 	}
 
-	void OnTriggerEnter2D (Collider2D coll) {
+	protected override void Interact() {
+		base.Interact ();
 		FadeToScene (sceneName, delay);
+	}
+
+	protected override void InteractableEffect () {
 	}
 
 	void FadeToScene(string sceneName, float delay) {

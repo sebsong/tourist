@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 77970152010f24c29a41ddf0921193b5
-timeCreated: 1509401050
+guid: acbaa8cb33b164e0f8ae34b0d439eddf
+timeCreated: 1509932793
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -10,6 +10,16 @@ TextureImporter:
     21300006: player_3
     21300008: player_4
     21300010: player_5
+    21300012: player_6
+    21300014: player_7
+    21300016: player_8
+    21300018: player_9
+    21300020: player_10
+    21300022: player_11
+    21300024: player_12
+    21300026: player_13
+    21300028: player_14
+    21300030: player_15
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -92,10 +102,10 @@ TextureImporter:
       name: player_0
       rect:
         serializedVersion: 2
-        x: 51
-        y: 260
-        width: 96
-        height: 130
+        x: 96
+        y: 579
+        width: 95
+        height: 125
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -106,10 +116,10 @@ TextureImporter:
       name: player_1
       rect:
         serializedVersion: 2
-        x: 190
-        y: 260
-        width: 90
-        height: 130
+        x: 215
+        y: 578
+        width: 95
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,10 +130,10 @@ TextureImporter:
       name: player_2
       rect:
         serializedVersion: 2
-        x: 330
-        y: 260
-        width: 95
-        height: 125
+        x: 334
+        y: 583
+        width: 96
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,9 +144,9 @@ TextureImporter:
       name: player_3
       rect:
         serializedVersion: 2
-        x: 56
-        y: 107
-        width: 91
+        x: 453
+        y: 580
+        width: 95
         height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -148,9 +158,9 @@ TextureImporter:
       name: player_4
       rect:
         serializedVersion: 2
-        x: 198
-        y: 106
-        width: 95
+        x: 104
+        y: 410
+        width: 90
         height: 130
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -162,10 +172,150 @@ TextureImporter:
       name: player_5
       rect:
         serializedVersion: 2
-        x: 337
-        y: 106
+        x: 218
+        y: 411
         width: 90
         height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: player_6
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 407
+        width: 90
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: player_7
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 407
+        width: 91
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: player_8
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 243
+        width: 90
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: player_9
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 243
+        width: 90
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: player_10
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 245
+        width: 90
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: player_11
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 244
+        width: 90
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: player_12
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 74
+        width: 95
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: player_13
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 73
+        width: 95
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: player_14
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 78
+        width: 95
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: player_15
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 72
+        width: 95
+        height: 134
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
