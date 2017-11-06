@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: acbaa8cb33b164e0f8ae34b0d439eddf
-timeCreated: 1509932793
+guid: a91b9974c31fd4e3eb94759e6372aefa
+timeCreated: 1509995317
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -270,8 +270,8 @@ TextureImporter:
       name: player_12
       rect:
         serializedVersion: 2
-        x: 104
-        y: 74
+        x: 102
+        y: 76
         width: 95
         height: 130
       alignment: 0
