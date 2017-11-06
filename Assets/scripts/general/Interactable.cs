@@ -7,12 +7,14 @@ public abstract class Interactable : MonoBehaviour {
 	private bool interactable;
 	private static bool interacting;
 	private static float interactionCooldown;
+	private PlayerController player;
 
 	// Use this for initialization
 	protected virtual void Start () {
 		interactable = false;
 		interacting = false;
 		interactionCooldown = 1f;
+		player = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerController> ();
 	}
 	
 	// Update is called once per frame
@@ -37,11 +39,13 @@ public abstract class Interactable : MonoBehaviour {
 
 	protected virtual void Interact() {
 		interacting = true;
+		player.Interact ();
 	}
 
-	public virtual void StopInteraction () {
+	public virtual void InteractEnd () {
 		interactionCooldown = 1f;
 		interacting = false;
+		player.InteractEnd ();
 	}
 
 	protected virtual void OnTriggerEnter2D (Collider2D coll) {

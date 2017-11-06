@@ -81,6 +81,6 @@ public class DialogueController : MonoBehaviour {
 		dialogueUIText.text = "";
 		dialogueUI.SetActive (false);
 		interacting = false;
-		npc.StopInteraction ();
+		npc.InteractEnd ();
 	}
 }

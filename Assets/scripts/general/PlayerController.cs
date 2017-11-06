@@ -48,7 +48,10 @@ public class PlayerController : MonoBehaviour {
 		transform.position += dir * speed * Time.deltaTime;
 	}
 
-	public void Interacting() {
+	public void Interact() {
 		interacting = true;
+	}
+	public void InteractEnd() {
+		interacting = false;
 	}
 }
