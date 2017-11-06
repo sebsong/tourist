@@ -5,9 +5,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	public float speed;
+	private Animator anim;
 
 	// Use this for initialization
 	void Start () {
+		anim = GetComponent<Animator> ();
+		anim.SetFloat ("speed", speed);
 	}
 	
 	// Update is called once per frame
@@ -18,14 +21,24 @@ public class PlayerController : MonoBehaviour {
 	// Handle player movement
 	void Move() {
 		Vector3 dir;
+
 		float horizontal = Input.GetAxisRaw ("Horizontal");
 		float vertical = Input.GetAxisRaw ("Vertical");
 
 		if (horizontal != 0) {
-			dir = new Vector2 (horizontal, 0);
+			vertical = 0f;
+		} else if (vertical != 0) {
+			horizontal = 0f;
 		} else {
-			dir = new Vector2 (0, vertical);
+			anim.SetBool ("isMoving", false);
+			return;
 		}
+
+		dir = new Vector2 (horizontal, vertical);
+
+		anim.SetFloat ("xDir", horizontal);
+		anim.SetFloat ("yDir", vertical);
+		anim.SetBool ("isMoving", true);
 
 		transform.position += dir * speed * Time.deltaTime;
 	}
