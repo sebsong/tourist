@@ -5,17 +5,22 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	public float speed;
+
+	private bool interacting;
 	private Animator anim;
 
 	// Use this for initialization
 	void Start () {
+		interacting = false;
 		anim = GetComponent<Animator> ();
 		anim.SetFloat ("speed", speed);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		Move ();
+		if (!interacting) {
+			Move ();
+		}
 	}
 
 	// Handle player movement
@@ -41,5 +46,9 @@ public class PlayerController : MonoBehaviour {
 		anim.SetBool ("isMoving", true);
 
 		transform.position += dir * speed * Time.deltaTime;
+	}
+
+	public void Interacting() {
+		interacting = true;
 	}
 }

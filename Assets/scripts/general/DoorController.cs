@@ -10,11 +10,13 @@ public class DoorController : Interactable {
 	public float delay;
 
 	private Image fade;
+	private GameObject glow;
 
 	protected override void Start() {
 		base.Start ();
 		fade = GameObject.FindGameObjectWithTag ("fade").GetComponent<Image>();
 		fade.canvasRenderer.SetAlpha (0f);
+		glow = transform.GetChild (0).gameObject;
 	}
 
 	protected override void Interact() {
@@ -23,6 +25,11 @@ public class DoorController : Interactable {
 	}
 
 	protected override void InteractableEffect () {
+		glow.SetActive (true);
+	}
+
+	protected override void InteractableEffectEnd () {
+		glow.SetActive (false);
 	}
 
 	void FadeToScene(string sceneName, float delay) {

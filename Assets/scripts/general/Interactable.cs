@@ -18,7 +18,6 @@ public abstract class Interactable : MonoBehaviour {
 	// Update is called once per frame
 	protected virtual void Update () {
 		if (interactionCooldown == 0 && interactable && !interacting) {
-			InteractableEffect ();
 			if (Input.GetKeyDown (KeyCode.Space)) {
 				Interact ();
 			}
@@ -34,6 +33,8 @@ public abstract class Interactable : MonoBehaviour {
 	//Visual effect to indicate player in range of NPC
 	protected abstract void InteractableEffect ();
 
+	protected abstract void InteractableEffectEnd ();
+
 	protected virtual void Interact() {
 		interacting = true;
 	}
@@ -45,9 +46,11 @@ public abstract class Interactable : MonoBehaviour {
 
 	protected virtual void OnTriggerEnter2D (Collider2D coll) {
 		interactable = true;
+		InteractableEffect ();
 	}
 
 	protected virtual void OnTriggerExit2D (Collider2D coll) {
 		interactable = false;
+		InteractableEffectEnd ();
 	}
 }
