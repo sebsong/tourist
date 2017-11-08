@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour {
 
 	public float speed;
 	private HashSet<Item> inventory;
+	private int proficiency;
+	private int proficiencyLevel;
 
 	private bool interacting;
 	private Animator anim;
