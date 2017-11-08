@@ -5,12 +5,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	public float speed;
+	private HashSet<Item> inventory;
 
 	private bool interacting;
 	private Animator anim;
 
 	// Use this for initialization
 	void Start () {
+		inventory = new HashSet<Item> ();
 		interacting = false;
 		anim = GetComponent<Animator> ();
 		anim.SetFloat ("speed", speed);
@@ -20,6 +22,13 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 		if (!interacting) {
 			Move ();
+		}
+
+		//DEBUG Inventory
+		if (Input.GetKeyDown (KeyCode.I)) {
+			foreach (Item item in inventory) {
+				print (item.GetItemName ());
+			}
 		}
 	}
 
@@ -51,7 +60,17 @@ public class PlayerController : MonoBehaviour {
 	public void Interact() {
 		interacting = true;
 	}
+
 	public void InteractEnd() {
 		interacting = false;
 	}
+
+	public void InventoryAdd (Item item) {
+		inventory.Add (item);
+	}
+
+	public bool InventoryContains (Item item) {
+		return inventory.Contains (item);
+	}
+
 }

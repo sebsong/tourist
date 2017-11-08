@@ -4,10 +4,11 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour {
 
+	protected PlayerController player;
+
 	private bool interactable;
 	private static bool interacting;
 	private static float interactionCooldown;
-	private PlayerController player;
 
 	// Use this for initialization
 	protected virtual void Start () {
