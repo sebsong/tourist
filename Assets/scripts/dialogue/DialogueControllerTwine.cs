@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -48,23 +49,28 @@ public class DialogueControllerTwine : MonoBehaviour {
 		Image otherSpeaker;
 
 		StoryPassage passage;
-		StoryLink[] links;
-		int linkIdx;
+		IEnumerable<StoryLink> links;
+		string link;
 		string[] tags;
 
-		links = (StoryLink[]) currentStory.GetCurrentLinks ();
-		linkIdx = HandleInput ();
-		if (linkIdx > links.Length - 1) {
+		links = currentStory.GetCurrentLinks ();
+		foreach (StoryLink l in links) {
+			print (l.PassageName);
+		}
+		link = HandleInput ();
+		if (currentStory.GetLink (link) == null) {
 			return;
 		}
 
 		if (isEnd) {
 			StopInteraction ();
+			isEnd = false;
 			return;
 		}
 
 		passage = currentStory.CurrentPassage;
 		tags = passage.Tags;
+		isPlayer = false;
 		foreach (string tag in tags) {
 			if (tag == "player") {
 				isPlayer = true;
@@ -82,19 +88,20 @@ public class DialogueControllerTwine : MonoBehaviour {
 		}
 		HighlightSprite (currSpeaker);
 		DarkenSprite (otherSpeaker);
-		dialogueUIText.text = passage.Text;
-		currentStory.DoLink (links [linkIdx].Name);
+//		print (currentStory.GetCurrentText ().ToArray ().Length);
+		dialogueUIText.text = currentStory.GetCurrentText ().ToArray () [0].Text;
+		currentStory.DoLink (link);
 	}
 
-	private static int HandleInput () {
+	private static string HandleInput () {
 		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
-			return 0;
+			return "left_arrow";
 		} else if (Input.GetKeyDown (KeyCode.Space)) {
-			return 1;
+			return "space";
 		} else if (Input.GetKeyDown (KeyCode.RightArrow)) {
-			return 2;
+			return "right_arrow";
 		} else {
-			return -1;
+			return "";
 		}
 	}
 
@@ -116,6 +123,8 @@ public class DialogueControllerTwine : MonoBehaviour {
 	public static void StartInteraction () {
 		interacting = true;
 		dialogueUI.SetActive (true);
+		currentStory.Begin ();
+		ContinueInteraction ();
 	}
 
 	public static void StopInteraction () {

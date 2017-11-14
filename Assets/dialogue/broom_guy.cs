@@ -66,7 +66,7 @@ public partial class @broom_guy: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	void passage1_Init()
 	{
-		this.Passages[@"broom1"] = new StoryPassage(@"broom1", new string[]{  }, passage1_Main);
+		this.Passages[@"broom1"] = new StoryPassage(@"broom1", new string[]{ "start", }, passage1_Main);
 	}
 
 	IStoryThread passage1_Main()

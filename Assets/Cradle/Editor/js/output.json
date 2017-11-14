@@ -5,7 +5,7 @@
             {
                 "Name": "broom1",
                 "Pid": "1",
-                "Tags": "",
+                "Tags": "start",
                 "Tokens": [
                     {
                         "text": "Hey! Get out of my way! Can't ya see I'm sweeping here?",
