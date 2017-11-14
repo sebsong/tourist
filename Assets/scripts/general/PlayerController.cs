@@ -15,6 +15,11 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		if (DoorController.currentExitPosition == null) {
+			transform.position = Vector3.zero;
+		} else {
+			transform.position = DoorController.currentExitPosition;
+		}
 		inventory = new Inventory ();
 		interacting = false;
 		anim = GetComponent<Animator> ();

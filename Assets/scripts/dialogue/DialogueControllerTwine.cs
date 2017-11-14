@@ -54,9 +54,6 @@ public class DialogueControllerTwine : MonoBehaviour {
 		string[] tags;
 
 		links = currentStory.GetCurrentLinks ();
-		foreach (StoryLink l in links) {
-			print (l.PassageName);
-		}
 		link = HandleInput ();
 		if (currentStory.GetLink (link) == null) {
 			return;
@@ -88,9 +85,17 @@ public class DialogueControllerTwine : MonoBehaviour {
 		}
 		HighlightSprite (currSpeaker);
 		DarkenSprite (otherSpeaker);
-//		print (currentStory.GetCurrentText ().ToArray ().Length);
 		dialogueUIText.text = currentStory.GetCurrentText ().ToArray () [0].Text;
+//		StartCoroutine (DisplayText(currentStory.GetCurrentText ().ToArray () [0].Text));
 		currentStory.DoLink (link);
+	}
+
+	IEnumerator DisplayText(string text) {
+		dialogueUIText.text = "";
+		foreach (char c in text.ToCharArray ()) {
+			dialogueUIText.text += c;
+			yield return new WaitForSeconds (0.1f);
+		}
 	}
 
 	private static string HandleInput () {
