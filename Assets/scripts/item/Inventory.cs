@@ -15,8 +15,8 @@ public class Inventory : IEnumerable<Item> {
 		inventory.Add (item);
 	}
 
-	public bool Contains (Item item) {
-		return inventory.Contains (item);
+	public bool Contains (string itemName) {
+		return inventory.Contains (new Item(itemName));
 	}
 
 	public IEnumerator<Item> GetEnumerator() {

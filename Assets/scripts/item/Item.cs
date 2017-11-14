@@ -7,6 +7,10 @@ public class Item : Interactable {
 	[SerializeField]
 	private string itemName;
 
+	public Item (string itemName) {
+		this.itemName = itemName;
+	}
+
 	protected override void Interact() {
 		base.Interact ();
 		player.InventoryAdd (this);

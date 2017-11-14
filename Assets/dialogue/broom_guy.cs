@@ -74,17 +74,17 @@ public partial class @broom_guy: Cradle.StoryFormats.Harlowe.HarloweStory
 		yield return text("Hey! Get out of my way! Can't ya see I'm sweeping here?");
 		yield return lineBreak();
 		yield return lineBreak();
-		yield return link("space ", " broom2", null);
+		yield return link("space", "broom2", null);
 		yield break;
 	}
 
 
 	// .............
-	// #2:  broom2
+	// #2: broom2
 
 	void passage2_Init()
 	{
-		this.Passages[@" broom2"] = new StoryPassage(@" broom2", new string[]{  }, passage2_Main);
+		this.Passages[@"broom2"] = new StoryPassage(@"broom2", new string[]{  }, passage2_Main);
 	}
 
 	IStoryThread passage2_Main()
@@ -102,7 +102,7 @@ public partial class @broom_guy: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	void passage3_Init()
 	{
-		this.Passages[@"player1"] = new StoryPassage(@"player1", new string[]{  }, passage3_Main);
+		this.Passages[@"player1"] = new StoryPassage(@"player1", new string[]{ "player", }, passage3_Main);
 	}
 
 	IStoryThread passage3_Main()
@@ -156,12 +156,15 @@ public partial class @broom_guy: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	void passage6_Init()
 	{
-		this.Passages[@"player2"] = new StoryPassage(@"player2", new string[]{  }, passage6_Main);
+		this.Passages[@"player2"] = new StoryPassage(@"player2", new string[]{ "player", "end", }, passage6_Main);
 	}
 
 	IStoryThread passage6_Main()
 	{
 		yield return text("Hey! I may not be able to understand you, but I can tell that wasn't very nice!");
+		yield return lineBreak();
+		yield return lineBreak();
+		yield return link("space", "broom1", null);
 		yield break;
 	}
 

@@ -20,17 +20,17 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"space \",\" broom2\"",
+                        "innerText": "link-goto:\"space\",\"broom2\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"space \",\" broom2\")",
+                        "text": "(link-goto:\"space\",\"broom2\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
                                 "type": "macroName"
                             },
                             {
-                                "innerText": "space ",
-                                "text": "\"space \"",
+                                "innerText": "space",
+                                "text": "\"space\"",
                                 "type": "string"
                             },
                             {
@@ -38,8 +38,8 @@
                                 "type": "comma"
                             },
                             {
-                                "innerText": " broom2",
-                                "text": "\" broom2\"",
+                                "innerText": "broom2",
+                                "text": "\"broom2\"",
                                 "type": "string"
                             }
                         ],
@@ -48,7 +48,7 @@
                 ]
             },
             {
-                "Name": " broom2",
+                "Name": "broom2",
                 "Pid": "2",
                 "Tags": "",
                 "Tokens": [
@@ -95,7 +95,7 @@
             {
                 "Name": "player1",
                 "Pid": "3",
-                "Tags": "",
+                "Tags": "player",
                 "Tokens": [
                     {
                         "text": "Oh I'm sorry!",
@@ -230,11 +230,45 @@
             {
                 "Name": "player2",
                 "Pid": "6",
-                "Tags": "",
+                "Tags": "player end",
                 "Tokens": [
                     {
                         "text": "Hey! I may not be able to understand you, but I can tell that wasn't very nice!",
                         "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"space\",\"broom1\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"space\",\"broom1\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "space",
+                                "text": "\"space\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "broom1",
+                                "text": "\"broom1\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
                     }
                 ]
             }

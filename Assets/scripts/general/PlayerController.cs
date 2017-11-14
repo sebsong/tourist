@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	public float speed;
-	private HashSet<Item> inventory;
+	private Inventory inventory;
+	//DEMO
 	private int proficiency;
 	private int proficiencyLevel;
 
@@ -14,7 +15,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		inventory = new HashSet<Item> ();
+		inventory = new Inventory ();
 		interacting = false;
 		anim = GetComponent<Animator> ();
 		anim.SetFloat ("speed", speed);
@@ -68,11 +69,11 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	public void InventoryAdd (Item item) {
-		inventory.Add (item);
+		inventory.AddItem (item);
 	}
 
-	public bool InventoryContains (Item item) {
-		return inventory.Contains (item);
+	public bool InventoryContains (string itemName) {
+		return inventory.Contains (itemName);
 	}
 
 }
