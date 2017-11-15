@@ -6,24 +6,20 @@ public class DataController : MonoBehaviour {
 
 	public static DataController Instance;
 
-	private PlayerData playerData;
+	public PlayerDataManager PlayerData { get; private set; }
+	public string ExitDoorName { get; set; }
+	public Vector3 ExitPosition { get; set; }
+
 	private string transitionDoor;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		if (Instance == null) {
 			DontDestroyOnLoad (gameObject);
 			Instance = this;
+			PlayerData = new PlayerDataManager ();
 		} else if (Instance != this) {
 			Destroy (Instance);
 		}
-		
-	}
-
-	public PlayerData GetPlayerData () {
-		return playerData;
-	}
-	public void SetPlayerData (PlayerData data) {
-		playerData = data;
 	}
 }

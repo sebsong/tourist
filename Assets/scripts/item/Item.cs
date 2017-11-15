@@ -13,7 +13,7 @@ public class Item : Interactable {
 
 	protected override void Interact() {
 		base.Interact ();
-		player.InventoryAdd (this);
+		DataController.Instance.PlayerData.InventoryAdd (this);
 		InteractEnd ();
 	}
 

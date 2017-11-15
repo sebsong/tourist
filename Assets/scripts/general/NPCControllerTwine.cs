@@ -29,7 +29,7 @@ public class NPCControllerTwine : Interactable {
 	//DEMO
 	public override void InteractEnd () {
 		base.InteractEnd ();
-		if (item != null && (conditionItem == "" || player.InventoryContains(conditionItem))) {
+		if (item != null && (conditionItem == "" || DataController.Instance.PlayerData.InventoryContains(conditionItem))) {
 			item.SetActive (true);
 		}
 	}

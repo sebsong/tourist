@@ -4,25 +4,22 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-	public float speed;
-	private Inventory inventory;
-	//DEMO
-	private int proficiency;
-	private int proficiencyLevel;
+	[SerializeField]
+	private float speed;
 
 	private bool interacting;
 	private Animator anim;
 
 	// Use this for initialization
 	void Start () {
-		if (DoorController.currentExitPosition == null) {
+		if (DataController.Instance.ExitPosition == null) {
 			transform.position = Vector3.zero;
 		} else {
-			transform.position = DoorController.currentExitPosition;
+			transform.position = DataController.Instance.ExitPosition;
 		}
-		inventory = new Inventory ();
 		interacting = false;
 		anim = GetComponent<Animator> ();
+		print (anim);
 		anim.SetFloat ("speed", speed);
 	}
 	
@@ -34,7 +31,7 @@ public class PlayerController : MonoBehaviour {
 
 		//DEBUG Inventory
 		if (Input.GetKeyDown (KeyCode.I)) {
-			foreach (Item item in inventory) {
+			foreach (Item item in DataController.Instance.PlayerData.PlayerInventory) {
 				print (item.GetItemName ());
 			}
 		}
@@ -73,12 +70,5 @@ public class PlayerController : MonoBehaviour {
 		interacting = false;
 	}
 
-	public void InventoryAdd (Item item) {
-		inventory.AddItem (item);
-	}
-
-	public bool InventoryContains (string itemName) {
-		return inventory.Contains (itemName);
-	}
 
 }
