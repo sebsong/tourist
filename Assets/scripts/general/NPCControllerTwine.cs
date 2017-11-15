@@ -10,6 +10,11 @@ public class NPCControllerTwine : Interactable {
 	public string conditionItem;
 
 	private Story story;
+	private Story full_anagram;
+	private Story half_anagram;
+	private Story no_anagram;
+	private Story item_receive;
+
 	private GameObject exclamation;
 
 	// Use this for initialization
@@ -28,11 +33,15 @@ public class NPCControllerTwine : Interactable {
 
 	//DEMO
 	public override void InteractEnd () {
-		base.InteractEnd ();
 		if (item != null && (conditionItem == "" || DataController.Instance.PlayerData.InventoryContains(conditionItem))) {
+			if (conditionItem != "") {
+				DataController.Instance.PlayerData.ProficiencyAdd (100);
+			}
 			DataController.Instance.PlayerData.InventoryRemove (conditionItem);
 			item.SetActive (true);
+			item = null;
 		}
+		base.InteractEnd ();
 	}
 
 	protected override void InteractableEffect () {

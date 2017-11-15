@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class PlayerController : MonoBehaviour {
 
 	private bool interacting;
 	private Animator anim;
+	private Text proficiencyLevelText;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +22,8 @@ public class PlayerController : MonoBehaviour {
 		interacting = false;
 		anim = GetComponent<Animator> ();
 		anim.SetFloat ("speed", speed);
+		proficiencyLevelText = GameObject.FindGameObjectWithTag ("proficiency_level_ui").GetComponent<Text> ();
+		proficiencyLevelText.text = "Proficiency: " + DataController.Instance.PlayerData.ProficiencyLevel.ToString();
 	}
 	
 	// Update is called once per frame
@@ -66,6 +70,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	public void InteractEnd() {
+		proficiencyLevelText.text = "Proficiency: " + DataController.Instance.PlayerData.ProficiencyLevel;
 		interacting = false;
 	}
 

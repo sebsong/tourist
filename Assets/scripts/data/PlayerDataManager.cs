@@ -4,13 +4,23 @@ using UnityEngine;
 
 public class PlayerDataManager {
 	public Inventory PlayerInventory { get; set; }
-	public int Proficiency { get; set; }
-	public int ProficiencyLevel { get; set; }
+	public int Proficiency { get; private set; }
+	public int ProficiencyLevel { get; private set; }
 
 	public PlayerDataManager() {
 		PlayerInventory = new Inventory ();
 		Proficiency = 0;
 		ProficiencyLevel = 0;
+	}
+
+	public void ProficiencyAdd (int pts) {
+		Proficiency += pts;
+		if (Proficiency >= 100) {
+			Proficiency = 0;
+			if (ProficiencyLevel < 3) {
+				ProficiencyLevel += 1;
+			}
+		}
 	}
 
 	public void InventoryAdd (Item item) {
