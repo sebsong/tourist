@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour {
 		}
 		interacting = false;
 		anim = GetComponent<Animator> ();
-		print (anim);
 		anim.SetFloat ("speed", speed);
 	}
 	
