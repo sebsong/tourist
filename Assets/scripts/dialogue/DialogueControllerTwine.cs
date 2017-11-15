@@ -129,7 +129,7 @@ public class DialogueControllerTwine : MonoBehaviour {
 		interacting = true;
 		dialogueUI.SetActive (true);
 		currentStory.Begin ();
-		ContinueInteraction ();
+//		ContinueInteraction ();
 	}
 
 	public static void StopInteraction () {

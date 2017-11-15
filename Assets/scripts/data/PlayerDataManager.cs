@@ -17,7 +17,12 @@ public class PlayerDataManager {
 		PlayerInventory.AddItem (item);
 	}
 
+	public void InventoryRemove (string itemName) {
+		PlayerInventory.RemoveItem (itemName);
+	}
+
 	public bool InventoryContains (string itemName) {
 		return PlayerInventory.Contains (itemName);
 	}
+
 }

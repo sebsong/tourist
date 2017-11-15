@@ -1,18 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : IEnumerable<Item> {
 
 	private HashSet<Item> inventory;
+	private Text inventoryText;
 
 	// Use this for initialization
 	public Inventory () {
+		inventoryText = GameObject.FindGameObjectWithTag ("inventory_ui").GetComponent<Text> ();
 		inventory = new HashSet<Item> ();
+		DrawUI ();
 	}
 
 	public void AddItem (Item item) {
 		inventory.Add (item);
+		DrawUI ();
+	}
+
+	public void RemoveItem (string itemName) {
+		inventory.Remove (new Item (itemName));
+		DrawUI ();
 	}
 
 	public bool Contains (string itemName) {
@@ -27,6 +37,11 @@ public class Inventory : IEnumerable<Item> {
 		return this.GetEnumerator ();
 	}
 
-//	public void DrawUI () {
-//	}
+	public void DrawUI () {
+		string inventoryString = "";
+		foreach (Item item in inventory) {
+			inventoryString += item.GetItemName () + "\n";
+		}
+		inventoryText.text = inventoryString;
+	}
 }

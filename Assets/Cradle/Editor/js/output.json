@@ -3,57 +3,12 @@
     "result": {
         "passages": [
             {
-                "Name": "broom1",
+                "Name": "dog1",
                 "Pid": "1",
-                "Tags": "start",
-                "Tokens": [
-                    {
-                        "text": "Hey! Get out of my way! Can't ya see I'm sweeping here?",
-                        "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"space\",\"broom2\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"space\",\"broom2\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "space",
-                                "text": "\"space\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "broom2",
-                                "text": "\"broom2\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    }
-                ]
-            },
-            {
-                "Name": "broom2",
-                "Pid": "2",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "You look like you've come a far way.",
+                        "text": "Off Woo Ow!",
                         "type": "text"
                     },
                     {
@@ -94,11 +49,11 @@
             },
             {
                 "Name": "player1",
-                "Pid": "3",
+                "Pid": "2",
                 "Tags": "player",
                 "Tokens": [
                     {
-                        "text": "Oh I'm sorry!",
+                        "text": "Wow what a cute dog, are you a good boy?",
                         "type": "text"
                     },
                     {
@@ -106,13 +61,9 @@
                         "type": "br"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"space\",\"broom3\"",
+                        "innerText": "link-goto:\"space\",\"dog2\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"space\",\"broom3\")",
+                        "text": "(link-goto:\"space\",\"dog2\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
@@ -128,8 +79,8 @@
                                 "type": "comma"
                             },
                             {
-                                "innerText": "broom3",
-                                "text": "\"broom3\"",
+                                "innerText": "dog2",
+                                "text": "\"dog2\"",
                                 "type": "string"
                             }
                         ],
@@ -138,12 +89,57 @@
                 ]
             },
             {
-                "Name": "broom3",
+                "Name": "dog2",
+                "Pid": "3",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "Grrr....",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"space\",\"dog3\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"space\",\"dog3\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "space",
+                                "text": "\"space\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "dog3",
+                                "text": "\"dog3\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": "dog3",
                 "Pid": "4",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "Dang tourists, traveling into town, making our streets dusty...",
+                        "text": "BARK",
                         "type": "text"
                     },
                     {
@@ -151,49 +147,8 @@
                         "type": "br"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"space\",\"broom4\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"space\",\"broom4\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "space",
-                                "text": "\"space\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "broom4",
-                                "text": "\"broom4\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    }
-                ]
-            },
-            {
-                "Name": "broom4",
-                "Pid": "5",
-                "Tags": "",
-                "Tokens": [
-                    {
-                        "text": "grumble grumble",
+                        "text": "BARK",
                         "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
                     },
                     {
                         "text": "\n",
@@ -229,11 +184,11 @@
             },
             {
                 "Name": "player2",
-                "Pid": "6",
-                "Tags": "player end",
+                "Pid": "5",
+                "Tags": "player",
                 "Tokens": [
                     {
-                        "text": "Hey! I may not be able to understand you, but I can tell that wasn't very nice!",
+                        "text": "I'll take that as a no...",
                         "type": "text"
                     },
                     {
@@ -241,13 +196,9 @@
                         "type": "br"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"space\",\"broom1\"",
+                        "innerText": "link-goto:\"space\",\"dog4\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"space\",\"broom1\")",
+                        "text": "(link-goto:\"space\",\"dog4\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
@@ -263,8 +214,94 @@
                                 "type": "comma"
                             },
                             {
-                                "innerText": "broom1",
-                                "text": "\"broom1\"",
+                                "innerText": "dog4",
+                                "text": "\"dog4\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": "player3",
+                "Pid": "6",
+                "Tags": "player end",
+                "Tokens": [
+                    {
+                        "text": "What do you want from me?",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"space\",\"dog1\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"space\",\"dog1\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "space",
+                                "text": "\"space\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "dog1",
+                                "text": "\"dog1\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": "dog4",
+                "Pid": "7",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "BARK BARK BARK BARK BARK",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"space\",\"player3\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"space\",\"player3\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "space",
+                                "text": "\"space\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "player3",
+                                "text": "\"player3\"",
                                 "type": "string"
                             }
                         ],

@@ -30,6 +30,7 @@ public class NPCControllerTwine : Interactable {
 	public override void InteractEnd () {
 		base.InteractEnd ();
 		if (item != null && (conditionItem == "" || DataController.Instance.PlayerData.InventoryContains(conditionItem))) {
+			DataController.Instance.PlayerData.InventoryRemove (conditionItem);
 			item.SetActive (true);
 		}
 	}
