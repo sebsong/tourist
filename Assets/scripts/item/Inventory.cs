@@ -10,7 +10,7 @@ public class Inventory : IEnumerable<Item> {
 
 	// Use this for initialization
 	public Inventory () {
-		inventoryText = GameObject.FindGameObjectWithTag ("inventory_ui").GetComponent<Text> ();
+//		inventoryText = GameObject.FindGameObjectWithTag ("inventory_ui").GetComponent<Text> ();
 		inventory = new HashSet<Item> ();
 		DrawUI ();
 	}
@@ -38,6 +38,7 @@ public class Inventory : IEnumerable<Item> {
 	}
 
 	public void DrawUI () {
+		inventoryText = GameObject.FindGameObjectWithTag ("inventory_ui").GetComponent<Text> ();
 		string inventoryString = "";
 		foreach (Item item in inventory) {
 			inventoryString += item.GetItemName () + "\n";

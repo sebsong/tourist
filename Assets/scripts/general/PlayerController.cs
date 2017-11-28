@@ -14,11 +14,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if (DataController.Instance.ExitPosition == null) {
-			transform.position = Vector3.zero;
-		} else {
-			transform.position = DataController.Instance.ExitPosition;
-		}
+		transform.position = DataController.Instance.ExitPosition;
 		interacting = false;
 		anim = GetComponent<Animator> ();
 		anim.SetFloat ("speed", speed);
@@ -38,6 +34,10 @@ public class PlayerController : MonoBehaviour {
 				print (item.GetItemName ());
 			}
 		}
+
+		if (Input.GetKeyDown (KeyCode.E)) {
+			Application.OpenURL ("https://goo.gl/forms/X5CdkcfDjdNclGy72");
+		}
 	}
 
 	// Handle player movement
@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour {
 		} else if (vertical != 0) {
 			horizontal = 0f;
 		} else {
+            print(anim);
 			anim.SetBool ("isMoving", false);
 			return;
 		}

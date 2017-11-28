@@ -3,12 +3,12 @@
     "result": {
         "passages": [
             {
-                "Name": "dog1",
+                "Name": "museum1",
                 "Pid": "1",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "Off Woo Ow!",
+                        "text": "W-wait aced son, you can’t be here! I’m sorry bit huts exhibit is closed. Our most valuable giant pin by Vincent van Gogh is MISSING!! You must leave dilemma yeti. Come back nitrate home!",
                         "type": "text"
                     },
                     {
@@ -53,7 +53,7 @@
                 "Tags": "player",
                 "Tokens": [
                     {
-                        "text": "Wow what a cute dog, are you a good boy?",
+                        "text": "Hey--that’s my backpack you have there!",
                         "type": "text"
                     },
                     {
@@ -61,9 +61,13 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"space\",\"dog2\"",
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"space\",\"museum2\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"space\",\"dog2\")",
+                        "text": "(link-goto:\"space\",\"museum2\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
@@ -79,8 +83,8 @@
                                 "type": "comma"
                             },
                             {
-                                "innerText": "dog2",
-                                "text": "\"dog2\"",
+                                "innerText": "museum2",
+                                "text": "\"museum2\"",
                                 "type": "string"
                             }
                         ],
@@ -89,66 +93,17 @@
                 ]
             },
             {
-                "Name": "dog2",
+                "Name": "museum2",
                 "Pid": "3",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "Grrr....",
+                        "text": "excuse em, wear hat you saying? You koala butting this? Why this I as smites yours artifact of unknown origin! Scholars vibe eel it is left behind by a raincoat fence aliens and are fighting to saga scene to study it, but it belongs the Emu sum, so they can’t, ha ha!",
                         "type": "text"
                     },
                     {
                         "text": "\n",
                         "type": "br"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"space\",\"dog3\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"space\",\"dog3\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "space",
-                                "text": "\"space\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "dog3",
-                                "text": "\"dog3\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    }
-                ]
-            },
-            {
-                "Name": "dog3",
-                "Pid": "4",
-                "Tags": "",
-                "Tokens": [
-                    {
-                        "text": "BARK",
-                        "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "BARK",
-                        "type": "text"
                     },
                     {
                         "text": "\n",
@@ -184,11 +139,11 @@
             },
             {
                 "Name": "player2",
-                "Pid": "5",
+                "Pid": "4",
                 "Tags": "player",
                 "Tokens": [
                     {
-                        "text": "I'll take that as a no...",
+                        "text": "...But that’s my backpack, and I want it back!",
                         "type": "text"
                     },
                     {
@@ -196,9 +151,13 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"space\",\"dog4\"",
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"space\",\"museum3\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"space\",\"dog4\")",
+                        "text": "(link-goto:\"space\",\"museum3\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
@@ -214,8 +173,8 @@
                                 "type": "comma"
                             },
                             {
-                                "innerText": "dog4",
-                                "text": "\"dog4\"",
+                                "innerText": "museum3",
+                                "text": "\"museum3\"",
                                 "type": "string"
                             }
                         ],
@@ -224,53 +183,12 @@
                 ]
             },
             {
-                "Name": "player3",
-                "Pid": "6",
-                "Tags": "player end",
-                "Tokens": [
-                    {
-                        "text": "What do you want from me?",
-                        "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"space\",\"dog1\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"space\",\"dog1\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "space",
-                                "text": "\"space\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "dog1",
-                                "text": "\"dog1\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    }
-                ]
-            },
-            {
-                "Name": "dog4",
-                "Pid": "7",
+                "Name": "museum3",
+                "Pid": "5",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "BARK BARK BARK BARK BARK",
+                        "text": "‘Backpack’ huh? Hail growth about this-- you find our giant pin, and you get your ‘backpack’ back! I’m sure it’s toucan tally worth much really…",
                         "type": "text"
                     },
                     {
@@ -302,6 +220,51 @@
                             {
                                 "innerText": "player3",
                                 "text": "\"player3\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": "player3",
+                "Pid": "6",
+                "Tags": "player end",
+                "Tokens": [
+                    {
+                        "text": "Deal?",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"space\",\"museum1\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"space\",\"museum1\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "space",
+                                "text": "\"space\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "museum1",
+                                "text": "\"museum1\"",
                                 "type": "string"
                             }
                         ],

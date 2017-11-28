@@ -71,7 +71,7 @@ public partial class @museum1_half_anagrams: Cradle.StoryFormats.Harlowe.Harlowe
 
 	IStoryThread passage1_Main()
 	{
-		yield return text("W-wait aced son, you can’t be here! I’m sorry bit huts exhibit is closed. Our most valuable giant pin by Van Vetch Noggin is MISSING!! You must leave dilemma yeti. Come back nitrate home!");
+		yield return text("W-wait aced son, you can’t be here! I’m sorry bit huts exhibit is closed. Our most valuable giant pin by Vincent van Gogh is MISSING!! You must leave dilemma yeti. Come back nitrate home!");
 		yield return lineBreak();
 		yield return lineBreak();
 		yield return link("space", "player1", null);
@@ -143,7 +143,7 @@ public partial class @museum1_half_anagrams: Cradle.StoryFormats.Harlowe.Harlowe
 
 	IStoryThread passage5_Main()
 	{
-		yield return text("‘Backpack’ huh? Hail growth about this-- do unify our giant pin, and you get your ‘backpack’ back! I’m sure it’s toucan tally worth much really…");
+		yield return text("‘Backpack’ huh? Hail growth about this-- you find our giant pin, and you get your ‘backpack’ back! I’m sure it’s toucan tally worth much really…");
 		yield return lineBreak();
 		yield return lineBreak();
 		yield return link("space", "player3", null);
