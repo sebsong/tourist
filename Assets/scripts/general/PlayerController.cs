@@ -34,6 +34,10 @@ public class PlayerController : MonoBehaviour {
 				print (item.GetItemName ());
 			}
 		}
+        if (Input.GetKeyDown (KeyCode.X)) {
+            DataController.Instance.PlayerData.ProficiencyAdd(100);
+		    proficiencyLevelText.text = "Proficiency: " + DataController.Instance.PlayerData.ProficiencyLevel.ToString();
+        }
 
 		if (Input.GetKeyDown (KeyCode.E)) {
 			Application.OpenURL ("https://goo.gl/forms/X5CdkcfDjdNclGy72");
