@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
 	private bool interacting;
 	private Animator anim;
 	private Text proficiencyLevelText;
+	private Text proficiencyPointsText;
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +19,9 @@ public class PlayerController : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 		anim.SetFloat ("speed", speed);
 		proficiencyLevelText = GameObject.FindGameObjectWithTag ("proficiency_level_ui").GetComponent<Text> ();
+		proficiencyPointsText = GameObject.FindGameObjectWithTag ("proficiency_pts_ui").GetComponent<Text> ();
 		proficiencyLevelText.text = "Proficiency: " + DataController.Instance.PlayerData.ProficiencyLevel.ToString();
+		proficiencyPointsText.text = "Progress: " + DataController.Instance.PlayerData.Proficiency.ToString() + "/100";
 		transform.position = DataController.Instance.ExitPosition + 0.5f * Vector3.down;
         DataController.Instance.PlayerData.PlayerInventory.DrawUI();
 	}
@@ -37,12 +40,14 @@ public class PlayerController : MonoBehaviour {
 		}
         if (Input.GetKeyDown (KeyCode.X)) {
             DataController.Instance.PlayerData.ProficiencyAdd(100);
-		    proficiencyLevelText.text = "Proficiency: " + DataController.Instance.PlayerData.ProficiencyLevel.ToString();
         }
 
 		if (Input.GetKeyDown (KeyCode.E)) {
 			Application.OpenURL ("https://goo.gl/forms/X5CdkcfDjdNclGy72");
 		}
+
+		proficiencyLevelText.text = "Proficiency: " + DataController.Instance.PlayerData.ProficiencyLevel.ToString();
+		/* proficiencyPointsText.text = "Proficiency Points: " + DataController.Instance.PlayerData.Proficiency.ToString() + "/100"; */
 	}
 
 	// Handle player movement
@@ -75,7 +80,6 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	public void InteractEnd() {
-		proficiencyLevelText.text = "Proficiency: " + DataController.Instance.PlayerData.ProficiencyLevel;
 		interacting = false;
 	}
 

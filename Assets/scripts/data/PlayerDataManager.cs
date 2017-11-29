@@ -10,14 +10,14 @@ public class PlayerDataManager {
 	public PlayerDataManager() {
 		PlayerInventory = new Inventory ();
 		Proficiency = 0;
-		ProficiencyLevel = 0;
+		ProficiencyLevel = 1;
 	}
 
 	public void ProficiencyAdd (int pts) {
 		Proficiency += pts;
 		if (Proficiency >= 100) {
 			Proficiency = 0;
-			if (ProficiencyLevel < 3) {
+			if (ProficiencyLevel < 4) {
 				ProficiencyLevel += 1;
 			}
 		}

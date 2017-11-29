@@ -22,6 +22,9 @@ public class DialogueControllerTwine : MonoBehaviour {
 	private static bool isPlayer;
 	private static bool isEnd;
 
+    private static Color playerTextColor;
+    private static Color npcTextColor;
+
 	// Use this for initialization
 	void Start () {
 		dialogueUI = GameObject.FindGameObjectWithTag ("dialogue_ui");
@@ -33,6 +36,9 @@ public class DialogueControllerTwine : MonoBehaviour {
 
 		isPlayer = false;
 		isEnd = false;
+
+        playerTextColor = new Color(33f/255, 136f/255, 178f/255, 1f);
+        npcTextColor = new Color(112f/255, 54f/255, 97f/255, 1f);
 	}
 
 	// Update is called once per frame
@@ -79,9 +85,11 @@ public class DialogueControllerTwine : MonoBehaviour {
 		if (isPlayer) {
 			currSpeaker = playerUIImage;
 			otherSpeaker = npcUIImage;
+            dialogueUIText.color = playerTextColor;
 		} else {
 			currSpeaker = npcUIImage;
 			otherSpeaker = playerUIImage;
+            dialogueUIText.color = npcTextColor;
 		}
 		HighlightSprite (currSpeaker);
 		DarkenSprite (otherSpeaker);

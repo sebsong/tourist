@@ -37,7 +37,7 @@ public class NPCControllerTwine : Interactable {
 		if (stories [3] != null && DataController.Instance.PlayerData.InventoryContains (conditionItem)) {
 			story = stories [3];
 		} else {
-			story = stories[DataController.Instance.PlayerData.ProficiencyLevel];
+			story = stories[DataController.Instance.PlayerData.ProficiencyLevel-1];
 		}
 		DialogueControllerTwine.SetInteraction (this, portrait, story);
 		DialogueControllerTwine.StartInteraction ();

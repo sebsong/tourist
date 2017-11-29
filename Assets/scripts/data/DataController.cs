@@ -17,10 +17,8 @@ public class DataController : MonoBehaviour {
 	// Use this for initialization
 	void Awake () {
 		if (Instance == null) {
-            print("REINITIALIZE");
 			DontDestroyOnLoad (gameObject);
 			Instance = this;
-            print(PlayerData);
 			PlayerData = new PlayerDataManager ();
 		} else if (Instance != this) {
 			Destroy (gameObject);
