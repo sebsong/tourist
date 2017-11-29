@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class DoorController : Interactable {
 
+	public static string ExitDoorName;// { get; set; }
+	public static Vector3 ExitPosition;// { get; set; }
+
 	[SerializeField]
 	private string doorName, exitDoorName, sceneName;
 
@@ -17,17 +20,17 @@ public class DoorController : Interactable {
 
 	protected override void Start() {
 		base.Start ();
+		if (doorName == ExitDoorName) {
+			ExitPosition = transform.position;
+		}
 		fade = GameObject.FindGameObjectWithTag ("fade").GetComponent<Image>();
 		fade.canvasRenderer.SetAlpha (0f);
 		glow = transform.GetChild (0).gameObject;
-		if (doorName == DataController.Instance.ExitDoorName) {
-			DataController.Instance.ExitPosition = transform.position;
-		}
 	}
 
 	protected override void Interact() {
 		base.Interact ();
-		DataController.Instance.ExitDoorName = exitDoorName;
+		ExitDoorName = exitDoorName;
 		FadeToScene (sceneName, delay);
 	}
 

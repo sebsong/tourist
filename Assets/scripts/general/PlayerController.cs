@@ -14,12 +14,12 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		transform.position = DataController.Instance.ExitPosition;
 		interacting = false;
 		anim = GetComponent<Animator> ();
 		anim.SetFloat ("speed", speed);
 		proficiencyLevelText = GameObject.FindGameObjectWithTag ("proficiency_level_ui").GetComponent<Text> ();
 		proficiencyLevelText.text = "Proficiency: " + DataController.Instance.PlayerData.ProficiencyLevel.ToString();
+		transform.position = DoorController.ExitPosition + 0.5f * Vector3.down;
 	}
 	
 	// Update is called once per frame
@@ -52,7 +52,6 @@ public class PlayerController : MonoBehaviour {
 		} else if (vertical != 0) {
 			horizontal = 0f;
 		} else {
-            print(anim);
 			anim.SetBool ("isMoving", false);
 			return;
 		}

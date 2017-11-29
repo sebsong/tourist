@@ -6,11 +6,9 @@ public class DataController : MonoBehaviour {
 
 	public static DataController Instance;
 
-	public PlayerDataManager PlayerData { get; private set; }
-	public string ExitDoorName { get; set; }
-	public Vector3 ExitPosition { get; set; }
+	public PlayerDataManager PlayerData;// { get; private set; }
 
-	private string transitionDoor;
+	/* public string transitionDoor; */
 
 	// Use this for initialization
 	void Awake () {
