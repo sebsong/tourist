@@ -56,6 +56,7 @@ public partial class @dancer2: Cradle.StoryFormats.Harlowe.HarloweStory
 		passage4_Init();
 		passage5_Init();
 		passage6_Init();
+		passage7_Init();
 	}
 
 	// ---------------
@@ -165,6 +166,24 @@ public partial class @dancer2: Cradle.StoryFormats.Harlowe.HarloweStory
 		using (Group("em", true)) {
 			yield return text("NICE SNOUT CAN DING ferociously");
 		}
+		yield return lineBreak();
+		yield return lineBreak();
+		yield return link("space", "daner1", null);
+		yield break;
+	}
+
+
+	// .............
+	// #7: daner1
+
+	void passage7_Init()
+	{
+		this.Passages[@"daner1"] = new StoryPassage(@"daner1", new string[]{  }, passage7_Main);
+	}
+
+	IStoryThread passage7_Main()
+	{
+		yield return text("Double-click this passage to edit it.");
 		yield break;
 	}
 

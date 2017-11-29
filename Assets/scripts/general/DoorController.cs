@@ -16,7 +16,7 @@ public class DoorController : Interactable {
 	private GameObject glow;
 
     void Awake() {
-		if (doorName == DataController.Instance.ExitDoorName) {
+		if (DataController.Instance != null && doorName == DataController.Instance.ExitDoorName) {
 			DataController.Instance.ExitPosition = transform.position;
             DataController.Instance.PositionSet = true;
 		}

@@ -165,6 +165,9 @@ public partial class @dancer3: Cradle.StoryFormats.Harlowe.HarloweStory
 		using (Group("em", true)) {
 			yield return text("continues dancing ferociously");
 		}
+		yield return lineBreak();
+		yield return lineBreak();
+		yield return link("space", "dancer1", null);
 		yield break;
 	}
 

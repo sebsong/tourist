@@ -246,6 +246,40 @@
                             }
                         ],
                         "type": "em"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"space\",\"dancer1\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"space\",\"dancer1\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "space",
+                                "text": "\"space\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "dancer1",
+                                "text": "\"dancer1\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
                     }
                 ]
             }

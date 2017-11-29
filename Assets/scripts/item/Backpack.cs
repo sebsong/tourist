@@ -5,7 +5,7 @@ using UnityEngine;
 public class Backpack : Item {
 
     [SerializeField]
-	private GameObject fakeBackpack, painting;
+	private GameObject fakeBackpack, painting, winMusicBox;
 
 	public Backpack (string itemName) : base (itemName) {
 	}
@@ -19,5 +19,6 @@ public class Backpack : Item {
     protected override void Interact() {
         base.Interact();
         DataController.Instance.PlayerData.ProficiencyLevel = 3;
+        winMusicBox.SetActive(true);
     }
 }
