@@ -19,7 +19,8 @@ public class PlayerController : MonoBehaviour {
 		anim.SetFloat ("speed", speed);
 		proficiencyLevelText = GameObject.FindGameObjectWithTag ("proficiency_level_ui").GetComponent<Text> ();
 		proficiencyLevelText.text = "Proficiency: " + DataController.Instance.PlayerData.ProficiencyLevel.ToString();
-		transform.position = DoorController.ExitPosition + 0.5f * Vector3.down;
+		transform.position = DataController.Instance.ExitPosition + 0.5f * Vector3.down;
+        print(transform.position);
 	}
 	
 	// Update is called once per frame

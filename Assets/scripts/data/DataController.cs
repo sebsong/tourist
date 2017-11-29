@@ -8,6 +8,10 @@ public class DataController : MonoBehaviour {
 
 	public PlayerDataManager PlayerData;// { get; private set; }
 
+	public string ExitDoorName;// { get; set; }
+	public Vector3 ExitPosition;// { get; set; }
+
+
 	/* public string transitionDoor; */
 
 	// Use this for initialization
