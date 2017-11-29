@@ -25,7 +25,6 @@ public class NPCControllerTwine : Interactable {
 		stories = new Story[4];
 		Story[] tempStories = GetComponents<Story> ();
 		for (int i = 0; i < tempStories.Length; i++) {
-//			print (tempStories [i].GetCurrentText ().ToArray()[0]);
 			stories [i] = tempStories [i];
 		}
 		exclamation = transform.GetChild (0).gameObject;
