@@ -22,8 +22,14 @@ public class PlayerController : MonoBehaviour {
 		proficiencyPointsText = GameObject.FindGameObjectWithTag ("proficiency_pts_ui").GetComponent<Text> ();
 		proficiencyLevelText.text = "Proficiency: " + DataController.Instance.PlayerData.ProficiencyLevel.ToString();
 		proficiencyPointsText.text = "Progress: " + DataController.Instance.PlayerData.Proficiency.ToString() + "/100";
-		transform.position = DataController.Instance.ExitPosition + 0.5f * Vector3.down;
         DataController.Instance.PlayerData.PlayerInventory.DrawUI();
+        while (true) {
+            if (DataController.Instance.PositionSet) {
+                transform.position = DataController.Instance.ExitPosition + 0.5f * Vector3.down;
+                DataController.Instance.PositionSet = false;
+                break;
+            }
+        }
 	}
 	
 	// Update is called once per frame
@@ -47,7 +53,7 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		proficiencyLevelText.text = "Proficiency: " + DataController.Instance.PlayerData.ProficiencyLevel.ToString();
-		/* proficiencyPointsText.text = "Proficiency Points: " + DataController.Instance.PlayerData.Proficiency.ToString() + "/100"; */
+		proficiencyPointsText.text = "Progress: " + DataController.Instance.PlayerData.Proficiency.ToString() + "/100";
 	}
 
 	// Handle player movement

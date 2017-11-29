@@ -3,12 +3,12 @@
     "result": {
         "passages": [
             {
-                "Name": "rando1",
+                "Name": "dancer1",
                 "Pid": "1",
-                "Tags": "end",
+                "Tags": "",
                 "Tokens": [
                     {
-                        "text": "Thanks for the COAL HOT!",
+                        "text": "Weeeeeeeeeeeee!",
                         "type": "text"
                     },
                     {
@@ -20,9 +20,9 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"space\",\"rando1\"",
+                        "innerText": "link-goto:\"space\",\"player1\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"space\",\"rando1\")",
+                        "text": "(link-goto:\"space\",\"player1\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
@@ -38,12 +38,214 @@
                                 "type": "comma"
                             },
                             {
-                                "innerText": "rando1",
-                                "text": "\"rando1\"",
+                                "innerText": "player1",
+                                "text": "\"player1\"",
                                 "type": "string"
                             }
                         ],
                         "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": "dancer2",
+                "Pid": "2",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "~Backpack~?? I dont know about no ~Backpack~, but I hear there's a cool exhibit at the museum. You should check it out!",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"space\",\"player2\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"space\",\"player2\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "space",
+                                "text": "\"space\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "player2",
+                                "text": "\"player2\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": "player1",
+                "Pid": "3",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "Hey! Have you seen my backpack around here?",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"space\",\"dancer2\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"space\",\"dancer2\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "space",
+                                "text": "\"space\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "dancer2",
+                                "text": "\"dancer2\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": "player2",
+                "Pid": "4",
+                "Tags": "player",
+                "Tokens": [
+                    {
+                        "text": "Wait... you can understand me???",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"space\",\"dancer3\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"space\",\"dancer3\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "space",
+                                "text": "\"space\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "dancer3",
+                                "text": "\"dancer3\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": "dancer3",
+                "Pid": "5",
+                "Tags": "",
+                "Tokens": [
+                    {
+                        "text": "...",
+                        "type": "text"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "text": "\n",
+                        "type": "br"
+                    },
+                    {
+                        "innerText": "link-goto:\"space\",\"dancer4\"",
+                        "name": "linkgoto",
+                        "text": "(link-goto:\"space\",\"dancer4\")",
+                        "tokens": [
+                            {
+                                "text": "link-goto:",
+                                "type": "macroName"
+                            },
+                            {
+                                "innerText": "space",
+                                "text": "\"space\"",
+                                "type": "string"
+                            },
+                            {
+                                "text": ",",
+                                "type": "comma"
+                            },
+                            {
+                                "innerText": "dancer4",
+                                "text": "\"dancer4\"",
+                                "type": "string"
+                            }
+                        ],
+                        "type": "macro"
+                    }
+                ]
+            },
+            {
+                "Name": "dancer4",
+                "Pid": "6",
+                "Tags": "end",
+                "Tokens": [
+                    {
+                        "text": "Weeeeeeeeeeeeeeeee!! ",
+                        "type": "text"
+                    },
+                    {
+                        "innerText": "continues dancing ferociously",
+                        "text": "*continues dancing ferociously*",
+                        "tokens": [
+                            {
+                                "text": "continues dancing ferociously",
+                                "type": "text"
+                            }
+                        ],
+                        "type": "em"
                     }
                 ]
             }

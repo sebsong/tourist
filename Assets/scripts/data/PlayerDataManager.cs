@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerDataManager {
 	public Inventory PlayerInventory { get; set; }
 	public int Proficiency { get; private set; }
-	public int ProficiencyLevel { get; private set; }
+	public int ProficiencyLevel { get; set; }
 
 	public PlayerDataManager() {
 		PlayerInventory = new Inventory ();

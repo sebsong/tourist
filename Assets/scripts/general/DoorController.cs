@@ -15,11 +15,15 @@ public class DoorController : Interactable {
 	private Image fade;
 	private GameObject glow;
 
-	protected override void Start() {
-		base.Start ();
+    void Awake() {
 		if (doorName == DataController.Instance.ExitDoorName) {
 			DataController.Instance.ExitPosition = transform.position;
+            DataController.Instance.PositionSet = true;
 		}
+    }
+
+	protected override void Start() {
+		base.Start ();
 		fade = GameObject.FindGameObjectWithTag ("fade").GetComponent<Image>();
 		fade.canvasRenderer.SetAlpha (0f);
 		glow = transform.GetChild (0).gameObject;

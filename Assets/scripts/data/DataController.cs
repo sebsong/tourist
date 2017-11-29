@@ -6,10 +6,11 @@ public class DataController : MonoBehaviour {
 
 	public static DataController Instance;
 
-	public PlayerDataManager PlayerData;// { get; private set; }
+	public PlayerDataManager PlayerData { get; private set; }
 
-	public string ExitDoorName;// { get; set; }
-	public Vector3 ExitPosition;// { get; set; }
+	public string ExitDoorName { get; set; }
+	public Vector3 ExitPosition { get; set; }
+    public bool PositionSet;
 
 
 	/* public string transitionDoor; */
@@ -20,6 +21,7 @@ public class DataController : MonoBehaviour {
 			DontDestroyOnLoad (gameObject);
 			Instance = this;
 			PlayerData = new PlayerDataManager ();
+            PositionSet = true;
 		} else if (Instance != this) {
 			Destroy (gameObject);
 		}
