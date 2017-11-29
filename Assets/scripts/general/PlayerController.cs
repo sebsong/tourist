@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour {
 		proficiencyLevelText = GameObject.FindGameObjectWithTag ("proficiency_level_ui").GetComponent<Text> ();
 		proficiencyLevelText.text = "Proficiency: " + DataController.Instance.PlayerData.ProficiencyLevel.ToString();
 		transform.position = DataController.Instance.ExitPosition + 0.5f * Vector3.down;
+        DataController.Instance.PlayerData.PlayerInventory.DrawUI();
 	}
 	
 	// Update is called once per frame
