@@ -30,7 +30,6 @@ public class MusicBoxController : MonoBehaviour {
     }
 
 	void OnTriggerEnter2D (Collider2D coll) {
-        print("TRIGGER");
         StartCoroutine(FadeIn(2f));
 	}
 
