@@ -168,7 +168,7 @@ public partial class @dancer2: Cradle.StoryFormats.Harlowe.HarloweStory
 		}
 		yield return lineBreak();
 		yield return lineBreak();
-		yield return link("space", "daner1", null);
+		yield return link("space", "dancer1", null);
 		yield break;
 	}
 

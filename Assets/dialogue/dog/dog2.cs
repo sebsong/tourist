@@ -134,7 +134,7 @@ public partial class @dog2: Cradle.StoryFormats.Harlowe.HarloweStory
 
 	void passage5_Init()
 	{
-		this.Passages[@"dog4"] = new StoryPassage(@"dog4", new string[]{  }, passage5_Main);
+		this.Passages[@"dog4"] = new StoryPassage(@"dog4", new string[]{ "end", }, passage5_Main);
 	}
 
 	IStoryThread passage5_Main()

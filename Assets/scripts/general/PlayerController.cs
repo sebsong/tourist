@@ -23,13 +23,7 @@ public class PlayerController : MonoBehaviour {
 		proficiencyLevelText.text = "Proficiency: " + DataController.Instance.PlayerData.ProficiencyLevel.ToString();
 		proficiencyPointsText.text = "Progress: " + DataController.Instance.PlayerData.Proficiency.ToString() + "/100";
         DataController.Instance.PlayerData.PlayerInventory.DrawUI();
-        while (true) {
-            if (DataController.Instance.PositionSet) {
-                transform.position = DataController.Instance.ExitPosition + 0.5f * Vector3.down;
-                DataController.Instance.PositionSet = false;
-                break;
-            }
-        }
+        transform.position = DataController.Instance.ExitPosition + 0.5f * Vector3.down;
 	}
 	
 	// Update is called once per frame

@@ -17,7 +17,7 @@ public class PlayerDataManager {
 		Proficiency += pts;
 		if (Proficiency >= 100) {
 			Proficiency = 0;
-			if (ProficiencyLevel < 4) {
+			if (ProficiencyLevel < 3) {
 				ProficiencyLevel += 1;
 			}
 		}

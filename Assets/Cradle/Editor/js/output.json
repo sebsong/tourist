@@ -3,17 +3,13 @@
     "result": {
         "passages": [
             {
-                "Name": "dancer1",
+                "Name": "dog1",
                 "Pid": "1",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "Weeeeeeeeeeeee!",
+                        "text": "FOG FRO OR WOW!",
                         "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
                     },
                     {
                         "text": "\n",
@@ -48,12 +44,12 @@
                 ]
             },
             {
-                "Name": "dancer2",
+                "Name": "player1",
                 "Pid": "2",
-                "Tags": "",
+                "Tags": "player",
                 "Tokens": [
                     {
-                        "text": "~Backpack~?? I dont know about no ~Backpack~, but I hear there's a cool exhibit at the museum. You should check it out!",
+                        "text": "You sound like you're all jumbled up.",
                         "type": "text"
                     },
                     {
@@ -65,9 +61,9 @@
                         "type": "br"
                     },
                     {
-                        "innerText": "link-goto:\"space\",\"player2\"",
+                        "innerText": "link-goto:\"space\",\"dog2\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"space\",\"player2\")",
+                        "text": "(link-goto:\"space\",\"dog2\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
@@ -83,8 +79,8 @@
                                 "type": "comma"
                             },
                             {
-                                "innerText": "player2",
-                                "text": "\"player2\"",
+                                "innerText": "dog2",
+                                "text": "\"dog2\"",
                                 "type": "string"
                             }
                         ],
@@ -93,12 +89,12 @@
                 ]
             },
             {
-                "Name": "player1",
+                "Name": "dog2",
                 "Pid": "3",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "Hey! Have you seen my backpack around here?",
+                        "text": "BAA BRR FORK PORGY WOK",
                         "type": "text"
                     },
                     {
@@ -106,13 +102,9 @@
                         "type": "br"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"space\",\"dancer2\"",
+                        "innerText": "link-goto:\"space\",\"player3\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"space\",\"dancer2\")",
+                        "text": "(link-goto:\"space\",\"player3\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
@@ -128,8 +120,8 @@
                                 "type": "comma"
                             },
                             {
-                                "innerText": "dancer2",
-                                "text": "\"dancer2\"",
+                                "innerText": "player3",
+                                "text": "\"player3\"",
                                 "type": "string"
                             }
                         ],
@@ -138,57 +130,12 @@
                 ]
             },
             {
-                "Name": "player2",
+                "Name": "player3",
                 "Pid": "4",
-                "Tags": "player",
-                "Tokens": [
-                    {
-                        "text": "Wait... you can understand me???",
-                        "type": "text"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"space\",\"dancer3\"",
-                        "name": "linkgoto",
-                        "text": "(link-goto:\"space\",\"dancer3\")",
-                        "tokens": [
-                            {
-                                "text": "link-goto:",
-                                "type": "macroName"
-                            },
-                            {
-                                "innerText": "space",
-                                "text": "\"space\"",
-                                "type": "string"
-                            },
-                            {
-                                "text": ",",
-                                "type": "comma"
-                            },
-                            {
-                                "innerText": "dancer3",
-                                "text": "\"dancer3\"",
-                                "type": "string"
-                            }
-                        ],
-                        "type": "macro"
-                    }
-                ]
-            },
-            {
-                "Name": "dancer3",
-                "Pid": "5",
                 "Tags": "",
                 "Tokens": [
                     {
-                        "text": "...",
+                        "text": "Hmm... Are you trying to imitate other animals?",
                         "type": "text"
                     },
                     {
@@ -196,13 +143,9 @@
                         "type": "br"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"space\",\"dancer4\"",
+                        "innerText": "link-goto:\"space\",\"dog4\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"space\",\"dancer4\")",
+                        "text": "(link-goto:\"space\",\"dog4\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
@@ -218,8 +161,8 @@
                                 "type": "comma"
                             },
                             {
-                                "innerText": "dancer4",
-                                "text": "\"dancer4\"",
+                                "innerText": "dog4",
+                                "text": "\"dog4\"",
                                 "type": "string"
                             }
                         ],
@@ -228,37 +171,22 @@
                 ]
             },
             {
-                "Name": "dancer4",
-                "Pid": "6",
+                "Name": "dog4",
+                "Pid": "5",
                 "Tags": "end",
                 "Tokens": [
                     {
-                        "text": "Weeeeeeeeeeeeeeeee!! ",
+                        "text": "BEAK WHARF BURR FINK",
                         "type": "text"
                     },
                     {
-                        "innerText": "continues dancing ferociously",
-                        "text": "*continues dancing ferociously*",
-                        "tokens": [
-                            {
-                                "text": "continues dancing ferociously",
-                                "type": "text"
-                            }
-                        ],
-                        "type": "em"
-                    },
-                    {
                         "text": "\n",
                         "type": "br"
                     },
                     {
-                        "text": "\n",
-                        "type": "br"
-                    },
-                    {
-                        "innerText": "link-goto:\"space\",\"dancer1\"",
+                        "innerText": "link-goto:\"space\",\"dog1\"",
                         "name": "linkgoto",
-                        "text": "(link-goto:\"space\",\"dancer1\")",
+                        "text": "(link-goto:\"space\",\"dog1\")",
                         "tokens": [
                             {
                                 "text": "link-goto:",
@@ -274,8 +202,8 @@
                                 "type": "comma"
                             },
                             {
-                                "innerText": "dancer1",
-                                "text": "\"dancer1\"",
+                                "innerText": "dog1",
+                                "text": "\"dog1\"",
                                 "type": "string"
                             }
                         ],

@@ -18,7 +18,6 @@ public class DoorController : Interactable {
     void Awake() {
 		if (DataController.Instance != null && doorName == DataController.Instance.ExitDoorName) {
 			DataController.Instance.ExitPosition = transform.position;
-            DataController.Instance.PositionSet = true;
 		}
     }
 
